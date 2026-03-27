@@ -45,22 +45,6 @@ Va em **Settings -> Secrets and variables -> Actions** e adicione:
 
 ---
 
-## O que NAO sobe para o GitHub
-
-Os arquivos abaixo estao no `.gitignore` e nunca devem ir ao repositorio:
-
-```
-.env               <- suas credenciais reais
-node_modules/      <- instalado via npm install
-jest-results.json  <- gerado automaticamente
-coverage/          <- gerado pelo Jest
-```
-
-Sobe o `.env.example` no lugar do `.env`.
-Qualquer pessoa que clonar o projeto copia o exemplo e preenche com suas proprias credenciais.
-
----
-
 ## Como usar este template em um novo projeto
 
 ### Opcao 1 — Template Repository (recomendado)
