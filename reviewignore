@@ -1,0 +1,6 @@
+# .reviewignore
+# Lista de arquivos que o agente NAO deve revisar
+# Funciona igual ao .gitignore — um caminho por linha
+
+scripts/stackspot_review.py
+scripts/stackspot_review_threads.py
