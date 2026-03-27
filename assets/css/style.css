@@ -1,0 +1,121 @@
+/* assets/css/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0d0d0f;
+  --surface: #16161a;
+  --border:  #2a2a35;
+  --accent:  #f0c040;
+  --danger:  #ff4d4d;
+  --text:    #e8e8f0;
+  --muted:   #6b6b80;
+  --radius:  10px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.subtitulo {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -1rem;
+}
+
+.form-busca {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input-busca {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-busca:focus { border-color: var(--accent); }
+.input-busca::placeholder { color: var(--muted); }
+
+.btn-buscar {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.8rem 1.4rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-buscar:hover { opacity: 0.85; }
+
+.resultado {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  display: none;
+}
+.resultado.visivel { display: block; }
+.resultado p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.termo-buscado {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--danger);
+  word-break: break-all;
+}
+
+.dica {
+  background: #1a1008;
+  border: 1px solid #3a2800;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.dica strong { color: var(--accent); }
+.dica code {
+  background: #0d0d0f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--danger);
+  font-size: 0.82rem;
+}
